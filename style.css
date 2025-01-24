@@ -1,0 +1,405 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #7b5844;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #7b5844;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Section Hero */
+#hero {
+    text-align: center;
+    padding: 4em 1em;
+    background-color: #b48a67;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+#hero span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+#hero .btn {
+    background-color: #b68b68;
+    color: white;
+    padding: 0.7em 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#hero .btn:hover {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Produits */
+.products-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2em 1em;
+}
+
+.products-grid .product {
+    text-align: center;
+    margin: 1em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.products-grid .product:hover {
+    transform: scale(1.05);
+}
+
+.products-grid .product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+.products-grid .product h3 {
+    font-size: 1.2em;
+    color: #b78c69;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+    margin-top: 2em;
+}
+
+footer h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+footer p, footer form {
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+footer input, footer button {
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: 80%;
+    max-width: 300px;
+}
+
+footer input[type="text"], footer input[type="email"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer button {
+    background-color: #b78c69;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+footer button:hover {
+    background-color: #ffd700;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header, #hero, footer {
+        text-align: center;
+        padding: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Styles spécifiques à la page "Nos Produits" */
+#products {
+    padding: 2em;
+    text-align: center;
+    background-color: #fff;
+}
+
+#products h2 {
+    color: #b68b68;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    color: #a67350;
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.product p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* Pagination styles */
+.pagination {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination a {
+    background-color: #b68b68;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: #a67350;
+}
+
+/* Styles spécifiques à la page "À propos" */
+#propos {
+    padding: 2em;
+    text-align: center;
+    background-color: #fffaf0;
+    color: #333;
+}
+
+#propos h2 {
+    font-size: 2em;
+    color: #b68b68;
+    margin-bottom: 1em;
+}
+
+#propos p {
+    line-height: 1.8;
+    font-size: 1.1em;
+    margin: 0 auto;
+    max-width: 800px;
+    color: #666;
+}
+
+#propos img {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 1.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styles spécifiques à la page "Contact" */
+#contact {
+    padding: 4em 2em;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#contact h2 {
+    color: #b68b68;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 2em;
+    line-height: 1.6;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+#contact form::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #b68b68;
+    border-radius: 2px;
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 0.8em;
+    font-size: 1em;
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #b68b68;
+    box-shadow: 0 0 5px rgba(182, 139, 104, 0.5);
+    outline: none;
+}
+
+#contact form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#contact form button {
+    background-color: #b68b68;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact form button:hover {
+    background-color: #a67350;
+    transform: translateY(-3px);
+}
+
+#contact form button:active {
+    transform: translateY(0);
+}
+
+#contact .contact-info {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 1.1em;
+    color: brown;
+}
+
+#contact .contact-info i {
+    color: brown;
+    margin-right: 0.5em;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+#contact .contact-info p {
+    margin-bottom: 0.8em;
+    font-size: 1em;
+    line-height: 1.5;
+}
